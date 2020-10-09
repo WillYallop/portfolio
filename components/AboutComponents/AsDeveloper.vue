@@ -26,7 +26,7 @@ export default {
             animateComp: true,
             description: "The best part about being a web developer is the process of seeing an idea come to life. This is the driving force behind my motivation on all projects I work on. It is the reason I love to create the best user experience possible and it is the reason I strive to learn new languages and technologies.",
             accordion: [
-                { id: 1, title: "Learn React", body: "After choosing to learn VueJs over React at the beginning of 2020 and now having a very good grasp on VueJs. I feel like its time to expand my knowledge of start learning React as soon as my existing projects are complete."},
+                { id: 1, title: "Learn React", body: "After choosing to learn VueJs over React at the beginning of 2020 and now having a very good grasp on VueJs. I feel like its time to expand my knowledge and start learning React as soon as my existing projects are complete."},
                 { id: 2, title: "To keep improving my portfolio", body: "Developing this portfolio has been a really nice change in pace from working on my new fitness app and I have several features I’m excited to add to it. Such as a reaction feature so I can gauge feedback to the websites on my portfolio and potentially a blog so I can go into more depth about the development of each of my projects."}
             ]
         }

@@ -150,7 +150,7 @@ export default {
     width: 100%;
     padding: 0 20px;
     height: 60px;
-    background-color: #161616;
+    background-color: #0C0C0C;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -1,189 +1,182 @@
-{
-    "col1": [
-        { 
-            "displayType": "long", 
-            "id": 1, 
-            "topText": "Fitness", 
-            "botText": "App", 
-            "textColor": "#FFF", 
-            "accent": "#1E63EB", 
-            "btnBackColor": "#FFF", 
-            "btnColor": "#1C1C1C", 
-            "websiteUrl": "https://fils.ltd", 
-            "mainImage": "fitnessAppMainImg.png", 
-            "longImage": "fitnessAppLongImg.png", 
-            "desktopImage": "fitnessAppDesktop.png",
-            "description": "This fitness app allows users to link their fitbit account, plan their workouts and track their progression. It also offers a number of programs to follow if you dont have time to make one youself.", 
-            "languages": [
-                ["js-square", "#ec008c"],
-                ["css3-alt", "#264de4"],
-                ["html5", "#E44D26"]
-            ],
-            "frameworks": [
-                "NuxtJs,",
-                "VueJs"
-            ],
-            "links": [
-                ["github", "#6e5494", "https://github.com/WillYallop/exodia-fitness" ]
-            ],
-            "modalBackground": "rgba(255, 255, 255, 0.15)"
-        },
-        { 
-            "displayType": "square", 
-            "id": 2, 
-            "topText": "Melody", 
-            "botText": "Melon", 
-            "textColor": "#FFF", 
-            "accent": "#EE7752", 
-            "btnBackColor": "#FFF", 
-            "btnColor": "#1C1C1C", 
-            "websiteUrl": "https://dev.melodymelon.com", 
-            "mainImage": "melodyMelonWebsiteImage.png", 
-            "desktopImage": "melodyMelonDesktop.png", 
-            "description": "Melody Melon is a playlist service for Spotify that offers musicians a place to get their music heard and brand fleshed out.", 
-            "languages": [
-                ["js-square", "#ec008c"],
-                ["css3-alt", "#264de4"],
-                ["html5", "#E44D26"]
-            ],
-            "frameworks": [
-                "NuxtJs,",
-                "VueJs"
-            ],
-            "links": [
-                ["github", "#6e5494", "https://github.com/WillYallop/melody-melon" ]
-            ],
-            "modalBackground": "rgba(255, 255, 255, 0.15)"
-        },
-        { 
-            "displayType": "square", 
-            "id": 3, 
-            "topText": "Playlist", 
-            "botText": "Finder", 
-            "textColor": "#FFF", 
-            "accent": "#FF2C4E", 
-            "btnBackColor": "#FFF", 
-            "btnColor": "#1C1C1C", 
-            "websiteUrl": "https://finder.melodymelon.com", 
-            "mainImage": "finderWebsiteImage.jpg", 
-            "desktopImage": "finderDesktop.png", 
-            "description": "A quick and simple tool to find your perfect playlist. Its still in development and so hasnt been populated with the correct playlists and currently all results are the same.", 
-            "languages": [
-                ["js-square", "#ec008c"],
-                ["css3-alt", "#264de4"],
-                ["html5", "#E44D26"]
-            ],
-            "frameworks": [
-                "VueJs"
-            ],
-            "links": [
-                ["github", "#6e5494", "https://github.com/WillYallop/playlist-finder" ]
-            ],
-            "modalBackground": "rgba(255, 255, 255, 0.15)"
-        },
-        { 
-            "displayType": "long", 
-            "id": 4, 
-            "topText": "Thespis", 
-            "botText": "App", 
-            "textColor": "#2B2B2B", 
-            "accent": "#E3EFF9", 
-            "btnBackColor": "#1E63EB", 
-            "btnColor": "#FFF", 
-            "websiteUrl": "https://thespis.williamyallop.com/", 
-            "mainImage": "thespisAppMainImg.png", 
-            "longImage": "thespisAppLongImg.png", 
-            "desktopImage": "thespisDesktop.png", 
-            "description": "Although abandoned, this is the final stages of where I left my first introduction to web development. Its purpose was to allow people with talent in the film industry to connect with other people of talent for collaborations. Feel free to log in with Email: demo@williamyallop.com and Password: demoPassword", 
-            "languages": [
-                ["js-square", "#ec008c"],
-                ["css3-alt", "#264de4"],
-                ["html5", "#E44D26"]
-            ],
-            "frameworks": [
-                "VueJs"
-            ],
-            "links": [
-                ["github", "#6e5494", "https://github.com/WillYallop/thespis" ]
-            ],
-            "modalBackground": "rgba(255, 255, 255, 0.6)"
-        }
-    ],
-    "col2": [
-        { 
-            "id": 5, 
-            "topText": "Anyrep", 
-            "botText": "Repairs", 
-            "textColor": "#FFF", 
-            "accent": "#FA2C2C", 
-            "btnBackColor": "#FFF",
-            "btnColor": "#1C1C1C", 
-            "websiteUrl": "https://anyrep.co.uk", 
-            "mainImage": "anyrepWebsiteImage.png", 
-            "desktopImage": "anyrepDesktop.png", 
-            "description": "I made this website for my dads business. Its a simple front end that allows users to understand his services and hire him for a job. It also features a store that is connected to a backend site I made. (This project needs updating)", 
-            "languages": [
-                ["js-square", "#ec008c"],
-                ["css3-alt", "#264de4"],
-                ["html5", "#E44D26"]
-            ],
-            "frameworks": [
-                "VueJs"
-            ],
-            "links": [
-               
-            ],
-            "modalBackground": "rgba(255, 255, 255, 0.15)"
-        },
-        { 
-            "id": 6, 
-            "topText": "Anyrep", 
-            "botText": "Admin", 
-            "textColor": "#2B2B2B", 
-            "accent": "#FFFFFF", 
-            "btnBackColor": "#1B9CF3", 
-            "btnColor": "#FFF", 
-            "websiteUrl": "https://anyrep.williamyallop.com", 
-            "mainImage": "anyrepAdminWebsiteImage.png", 
-            "desktopImage": "anyrepAdminDesktop.png", 
-            "description": "This website allows my dad to add products to anyrep.co.uk. This current version of the site is a copy and uses a different database. Feel free to log in with Email: demo@williamyallop.com and Password: demoPassword", 
-            "languages": [
-                ["js-square", "#ec008c"],
-                ["css3-alt", "#264de4"],
-                ["html5", "#E44D26"]
-            ],
-            "frameworks": [
-                "VueJs"
-            ],
-            "links": [
-                ["github", "#6e5494", "https://github.com/WillYallop/anyrep-admin" ]
-            ],
-            "modalBackground": "#F9F9F9"
-        },
-        { 
-            "id": 7, 
-            "topText": "FILS", 
-            "botText": "Fitness", 
-            "textColor": "#FFF", 
-            "accent": "#05B0A0", 
-            "btnBackColor": "#FFF",
-            "btnColor": "#1C1C1C", 
-            "websiteUrl": "https://filsfitness.com", 
-            "mainImage": "filsFitnessWebsiteImage.png", 
-            "desktopImage": "filsFitnessDesktop.png", 
-            "description": "This is my second ever website created with PHP and is very basic. However it allows you to create a workout and also track some data about it. It also has a feature where you can compare your lifts against the average standards for other people.", 
-            "languages": [
-                ["php", "#474A8A"],
-                ["css3-alt", "#264de4"],
-                ["html5", "#E44D26"]
-            ],
-            "frameworks": [
+[
 
-            ],
-            "links": [
-                ["github", "#6e5494", "https://github.com/WillYallop/fils-fitness" ]
-            ],
-            "modalBackground": "rgba(255, 255, 255, 0.15)"
-        }
-    ]
-}
+    { 
+        "displayType": "long", 
+        "id": 1, 
+        "title": "EXODIA Fitness", 
+        "textColor": "#FFF", 
+        "accent": "#1E63EB", 
+        "btnBackColor": "#FFF", 
+        "btnColor": "#1C1C1C", 
+        "websiteUrl": "https://exodiafitness.com", 
+        "mainImage": "exodiaMain.png", 
+        "mobileImage": false,
+        "description": "This fitness app allows users to link their fitbit account, plan their workouts and track their progression. It also offers a number of programs to follow if you dont have time to make one youself.", 
+        "languages": [
+            ["js-square", "#ec008c"],
+            ["css3-alt", "#264de4"],
+            ["html5", "#E44D26"]
+        ],
+        "frameworks": [
+            "NuxtJs,",
+            "VueJs"
+        ],
+        "links": [
+            ["github", "#6e5494", "https://github.com/WillYallop/exodia-fitness" ]
+        ],
+        "modalBackground": "rgba(255, 255, 255, 0.15)"
+    },
+    { 
+        "displayType": "short", 
+        "id": 5, 
+        "title": "Anyrep Repairs", 
+        "textColor": "#FFF", 
+        "accent": "#FA2C2C", 
+        "btnBackColor": "#FFF",
+        "btnColor": "#1C1C1C", 
+        "websiteUrl": "https://anyrep.co.uk", 
+        "mainImage": "anyrepMain.png", 
+        "mobileImage": "anyrepMobile.png",
+        "description": "I made this website for my dads business. Its a simple front end that allows users to understand his services and hire him for a job. It also features a store that is connected to a backend site I made. (This project needs updating)", 
+        "languages": [
+            ["js-square", "#ec008c"],
+            ["css3-alt", "#264de4"],
+            ["html5", "#E44D26"]
+        ],
+        "frameworks": [
+            "VueJs",
+            "NuxtJs"
+        ],
+        "links": [
+            ["github", "#6e5494", "https://github.com/WillYallop/anyrep" ]
+        ],
+        "modalBackground": "rgba(255, 255, 255, 0.15)"
+    },
+    { 
+        "displayType": "short", 
+        "id": 2, 
+        "title": "Melody Melon", 
+        "textColor": "#FFF", 
+        "accent": "#EE7752", 
+        "btnBackColor": "#FFF", 
+        "btnColor": "#1C1C1C", 
+        "websiteUrl": "https://dev.melodymelon.com", 
+        "mainImage": "melodyMelonMain.png", 
+        "mobileImage": "melodyMelonMobile.png",
+        "description": "Melody Melon is a playlist service for Spotify that offers musicians a place to get their music heard and brand fleshed out.", 
+        "languages": [
+            ["js-square", "#ec008c"],
+            ["css3-alt", "#264de4"],
+            ["html5", "#E44D26"]
+        ],
+        "frameworks": [
+            "NuxtJs,",
+            "VueJs"
+        ],
+        "links": [
+            ["github", "#6e5494", "https://github.com/WillYallop/melody-melon" ]
+        ],
+        "modalBackground": "rgba(255, 255, 255, 0.15)"
+    },
+    { 
+        "displayType": "short", 
+        "id": 3, 
+        "title": "Playlist Finder", 
+        "textColor": "#FFF", 
+        "accent": "#FF2C4E", 
+        "btnBackColor": "#FFF", 
+        "btnColor": "#1C1C1C", 
+        "websiteUrl": "https://finder.melodymelon.com", 
+        "mainImage": "melodyFinerMain.png", 
+        "mobileImage": "melodyFinderMobile.png",
+        "description": "A quick and simple tool to find your perfect playlist. Its still in development and so hasnt been populated with the correct playlists and currently all results are the same.", 
+        "languages": [
+            ["js-square", "#ec008c"],
+            ["css3-alt", "#264de4"],
+            ["html5", "#E44D26"]
+        ],
+        "frameworks": [
+            "VueJs"
+        ],
+        "links": [
+            ["github", "#6e5494", "https://github.com/WillYallop/playlist-finder" ]
+        ],
+        "modalBackground": "rgba(255, 255, 255, 0.15)"
+    },
+    { 
+        "displayType": "short", 
+        "id": 6, 
+        "title": "Anyrep Admin", 
+        "textColor": "#2B2B2B", 
+        "accent": "#FFFFFF", 
+        "btnBackColor": "#1B9CF3", 
+        "btnColor": "#FFF", 
+        "websiteUrl": "https://anyrep.williamyallop.com", 
+        "mainImage": "anyrepAdminMain.png", 
+        "mobileImage": "anyrepAdminMobile.png",
+        "description": "This website allows my dad to add products to anyrep.co.uk. This current version of the site is a copy and uses a different database. Feel free to log in with Email: demo@williamyallop.com and Password: demoPassword", 
+        "languages": [
+            ["js-square", "#ec008c"],
+            ["css3-alt", "#264de4"],
+            ["html5", "#E44D26"]
+        ],
+        "frameworks": [
+            "VueJs"
+        ],
+        "links": [
+            ["github", "#6e5494", "https://github.com/WillYallop/anyrep-admin" ]
+        ],
+        "modalBackground": "#F9F9F9"
+    },
+    { 
+        "displayType": "long", 
+        "id": 4, 
+        "title": "Thespis App", 
+        "textColor": "#2B2B2B", 
+        "accent": "#E3EFF9", 
+        "btnBackColor": "#1E63EB", 
+        "btnColor": "#FFF", 
+        "websiteUrl": "https://thespis.williamyallop.com/", 
+        "mainImage": "thespisMain.png", 
+        "mobileImage": false,
+        "description": "Although abandoned, this is the final stages of where I left my first introduction to web development. Its purpose was to allow people with talent in the film industry to connect with other people of talent for collaborations. Feel free to log in with Email: demo@williamyallop.com and Password: demoPassword", 
+        "languages": [
+            ["js-square", "#ec008c"],
+            ["css3-alt", "#264de4"],
+            ["html5", "#E44D26"]
+        ],
+        "frameworks": [
+            "VueJs"
+        ],
+        "links": [
+            ["github", "#6e5494", "https://github.com/WillYallop/thespis" ]
+        ],
+        "modalBackground": "rgba(255, 255, 255, 0.6)"
+    },
+    { 
+        "displayType": "short", 
+        "id": 7, 
+        "title": "FILS Fitness",
+        "textColor": "#FFF", 
+        "accent": "#05B0A0", 
+        "btnBackColor": "#FFF",
+        "btnColor": "#1C1C1C", 
+        "websiteUrl": "https://filsfitness.com", 
+        "mainImage": "filsFitnessMain.png", 
+        "mobileImage": "filsFitnessMobile.png",
+        "description": "This is my second ever website created with PHP and is very basic. However it allows you to create a workout and also track some data about it. It also has a feature where you can compare your lifts against the average standards for other people.", 
+        "languages": [
+            ["php", "#474A8A"],
+            ["css3-alt", "#264de4"],
+            ["html5", "#E44D26"]
+        ],
+        "frameworks": [
+
+        ],
+        "links": [
+            ["github", "#6e5494", "https://github.com/WillYallop/fils-fitness" ]
+        ],
+        "modalBackground": "rgba(255, 255, 255, 0.15)"
+    }
+ 
+]

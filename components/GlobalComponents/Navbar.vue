@@ -57,7 +57,7 @@ export default {
     left: 0;
     bottom: 0;
     width: 350px;
-    background-color: #1B1B1B;
+    background-color: #0C0C0C;
 }
 .navWrapper {
     height: 100%;

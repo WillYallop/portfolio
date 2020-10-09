@@ -36,7 +36,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background-color: #222222;
+  background-color: #181818;
   height: 100%;
   color: #FFF;
 }

@@ -1,72 +1,27 @@
 <template>
     <div class="portCon">
+        <div class="portCardCon long" :key="website.id" v-for="website in websiteJson" :class="website.displayType">
+            <div class="portCardInner" :class="{ 'fadeUpAni' : animateCols, 'above' : zIndexArray[website.id - 1] }" :style="{ 'background-color' : website.accent}" v-on:click="moreInfoNavigate(website)"
+                @mouseover="showOverlay = true; updateIndex(true, website.id - 1);" 
+                @mouseleave="showOverlay = false; updateIndex(false, website.id - 1); showNavigateButton = false">
 
-        <div class="col1">
-            <div class="webCon" :key="websites.id" v-for="websites in websiteJson.col1" :class="{ 'longCon' : websites.displayType == 'long', 'squareCon' : websites.displayType == 'square' }">
-                <div class="webConInner" :class="{ 'fadeUpAni' : animateCols, 'above' : zIndexArray[websites.id - 1] }" v-on:click="moreInfoNavigate(websites)"
-                @mouseover="showOverlay = true; updateIndex(true, websites.id - 1);" 
-                @mouseleave="showOverlay = false; updateIndex(false, websites.id - 1); showNavigateButton = false"
-                :style="{ 'background-color' : websites.accent}">
-                    <!-- If its long con -->
-                    <div class="longConInner" v-if="websites.displayType == 'long'"> 
-                        <div class="innerTextarea">
-                            <p class="nameP" :style="{ 'color' : websites.textColor }">{{websites.topText}}</p>
-                            <p class="nameP" :style="{ 'color' : websites.textColor }">{{websites.botText}}</p>
-                            <button @click.stop="navigateToWebsite(websites.websiteUrl)" class="visitSiteBtn" :style="{ 'background-color' : websites.btnBackColor, 'color' : websites.btnColor }"><span class="desktopContent">visit<fa class="fas desktopFas" :style="{ 'color' : websites.btnColor }" :icon="['fas', 'chevron-right']" /></span><fa class="fas mobileFas" :style="{ 'color' : websites.btnColor }" :icon="['fas', 'desktop']" /></button>
-                        </div>
-                        <div class="imageContainer">
-                            <img :src="getImageUrl(websites.mainImage)" :alt="websites.name + ' preview'" class="longConImage">
-                            <img :src="getImageUrl(websites.longImage)" :alt="websites.name + ' preview'" class="longConImageTall">
-                            <img :src="getImageUrl(websites.desktopImage)" :alt="websites.name + ' preview'" class="longConImageDesktop">
-                        </div>
-                        <div class="navigateToPageBtnCon" v-if="showNavigateButton && zIndexArray[websites.id - 1]">
-                            <button v-on:click="openModal(websites)" class="moreInfBtn" :style="{ 'background-color' : websites.btnBackColor, 'color' : websites.btnColor }">More Info</button>
-                        </div>
-                    </div>
-                    <!-- If its square con -->
-                    <div class="squareConInner" v-if="websites.displayType == 'square'">
-                        <div class="innerTextarea">
-                            <p class="nameP" :style="{ 'color' : websites.textColor }">{{websites.topText}}</p>
-                            <p class="nameP" :style="{ 'color' : websites.textColor }">{{websites.botText}}</p>
-                            <button @click.stop="navigateToWebsite(websites.websiteUrl)" class="visitSiteBtn" :style="{ 'background-color' : websites.btnBackColor, 'color' : websites.btnColor }"><span class="desktopContent">visit<fa class="fas desktopFas" :style="{ 'color' : websites.btnColor }" :icon="['fas', 'chevron-right']" /></span><fa class="fas mobileFas" :style="{ 'color' : websites.btnColor }" :icon="['fas', 'desktop']" /></button>
-                        </div>
-                        <div class="imageContainer">
-                            <img :src="getImageUrl(websites.mainImage)" :alt="websites.name + ' preview'" class="squareConImage">
-                            <img :src="getImageUrl(websites.desktopImage)" :alt="websites.name + ' preview'" class="squareConImageDesktop">
-                        </div>
-                        <div class="navigateToPageBtnCon" v-if="showNavigateButton && zIndexArray[websites.id - 1]">
-                            <button v-on:click="openModal(websites)" class="moreInfBtn" :style="{ 'background-color' : websites.btnBackColor, 'color' : websites.btnColor }">More Info</button>
-                        </div>
-                    </div>
+                <div class="titleArea">
+                    <h4 class="cardTitle" :style="{ 'color' : website.textColor }">{{website.title}}</h4>
+                    <a :href="website.websiteUrl" target="_blank" class="visitSiteBtn" :style="{ 'background-color' : website.btnBackColor, 'color' : website.btnColor }">website<fa class="fas" :style="{ 'color' : website.btnColor }" :icon="['fas', 'chevron-right']" /></a>
+                    <a :href="website.websiteUrl" target="_blank" class="mobileSiteBtn" :style="{ 'background-color' : website.btnBackColor, 'color' : website.btnColor }"><fa class="fas" :style="{ 'color' : website.btnColor }" :icon="['fas', 'desktop']" /></a>
                 </div>
-            </div>
-        </div>
-        <div class="col2">
-            <div class="webCon col2WebCon" :key="websites.id" v-for="websites in websiteJson.col2" >
-                <div class="webConInner" :class="{ 'fadeUpAni' : animateCols, 'above' : zIndexArray[websites.id - 1] }" v-on:click="moreInfoNavigate(websites)"
-                @mouseover="showOverlay = true; updateIndex(true, websites.id - 1);" 
-                @mouseleave="showOverlay = false; updateIndex(false, websites.id - 1); showNavigateButton = false"
-                :style="{ 'background-color' : websites.accent}">
-                    <div class="squareConInner">
-                        <div class="innerTextarea">
-                            <p class="nameP" :style="{ 'color' : websites.textColor }">{{websites.topText}}</p>
-                            <p class="nameP" :style="{ 'color' : websites.textColor }">{{websites.botText}}</p>
-                            <button @click.stop="navigateToWebsite(websites.websiteUrl)" class="visitSiteBtn" :style="{ 'background-color' : websites.btnBackColor, 'color' : websites.btnColor }"><span class="desktopContent">visit<fa class="fas desktopFas" :style="{ 'color' : websites.btnColor }" :icon="['fas', 'chevron-right']" /></span><fa class="fas mobileFas" :style="{ 'color' : websites.btnColor }" :icon="['fas', 'desktop']" /></button>
-                        </div>
-                        <div class="imageContainer">
-                            <img :src="getImageUrl(websites.mainImage)" :alt="websites.name + ' preview'" class="squareConImage" :class="{ 'darkBorder' : websites.id == 6 }">
-                            <img :src="getImageUrl(websites.desktopImage)" :alt="websites.name + ' preview'" class="squareConImageDesktop">
-                        </div>
-                        <div class="navigateToPageBtnCon" v-if="showNavigateButton && zIndexArray[websites.id - 1]">
-                            <button v-on:click="openModal(websites)" class="moreInfBtn" :style="{ 'background-color' : websites.btnBackColor, 'color' : websites.btnColor }">More Info</button>
-                        </div>
-                    </div>
+                
+                <img class="cardMainImg" :src="getImageUrl(website.mainImage)" :alt="website.title">
+                <img v-if="website.mobileImage" class="cardMobileImg" :src="getImageUrl(website.mobileImage)" :alt="website.title">
+                <img v-else class="cardMobileImg" :src="getImageUrl(website.mainImage)" :alt="website.title">
+
+                <div class="navigateToPageBtnCon" v-if="showNavigateButton && zIndexArray[website.id - 1]">
+                    <button v-on:click="openModal(website)" class="moreInfBtn" :style="{ 'background-color' : website.btnBackColor, 'color' : website.btnColor }">More Info</button>
                 </div>
             </div>
         </div>
 
         <div class="pageOver" :class="{ 'active' : showOverlay }"></div>
-
     </div>
 </template>
 
@@ -87,7 +42,7 @@ export default {
         }
     },
     mounted() {
-        this.portfolioTotal = this.websiteJson.col1.length + this.websiteJson.col2.length
+        this.portfolioTotal = this.websiteJson.length
         for (var i = 0; i < this.portfolioTotal; i++) {
             this.zIndexArray.push(false)
         }
@@ -153,180 +108,102 @@ export default {
 
 <style scoped>
 .portCon {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -10px;
     padding: 0 40px 40px;
-}
-.col1 {
-    width: 66.66%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-self: flex-start; 
-    transition: 0.3s;
 }
-.col2 {
+.portCardCon {
+    padding: 10px;
+    height: 300px;
+}
+.portCardCon.long {
+    width: 66.66%;
+}
+.portCardCon.short {
     width: 33.33%;
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s;
 }
+.portCardInner {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+.portCardInner.above {
+    z-index: 300;
+}
+/* Card Inner Style */
+.titleArea { 
+    padding-right: 20px;
+}
+.portCardCon.long .titleArea { 
+    padding-right: 40px;
+}
+.cardTitle {
+    font-size: 38px;
+    line-height: 38px;
+    max-width: 150px;
+}
+/* Desktop Btn */
+.visitSiteBtn {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.visitSiteBtn .fas {
+    margin-left: 10px;
+    font-size: 14px;
+}
+/* Mobile Btn */
+.mobileSiteBtn {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+/* card image */
+.cardMainImg {
+    height: 100%;
+}
+.portCardCon.short .cardMainImg {
+    margin-top: 170px;
+    width: 200px;
+    height: auto !important;
+}
+.portCardCon.long .cardMainImg {
+    height: 100%;
+}
+/* Mobile Card Image */
+.cardMobileImg {
+    width: 100%;
+    margin-top: 20px;
+    display: none;
+}
+
+/* Card z-index related */
 .fadeUpAni {
     transform: translate(0,50px);
     opacity: 0;
-}
-.webCon {
-    padding: 10px;
-}
-.longCon {width: 100%; } 
-.squareCon {width: 50%;} 
-.col2WebCon {width: 100%;}
-
-.webConInner {
-    background-color: #FFF;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    cursor: pointer;
-    position: relative;
-}
-.webConInner.above {
-    z-index: 300;
-}
-.longCon .webConInner {height: 320px;} 
-.squareCon .webConInner {height: 320px;} 
-.col2WebCon .webConInner {height: 320px;} 
-
-/* Long con */
-.longConInner {
-    height: 100%;
-    width: 100%;
-}
-.longConInner:hover .longConImage {
-    transform: scale(1.05);
-}
-.longConImage {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    width: 350px;
-    transform: rotate(5deg);
-    transition: 0.3s;
-} 
-.longConInner:hover .longConImageTall {
-    transform: scale(1.05);
-}
-.longConInner:hover .longConImageDesktop {
-    transform: scale(1.05);
-}
-.longConImageTall {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 250px;
-    border-radius: 10px;
-    border: 2px solid #FFF;
-    transition: 0.3s;
-}
-.longConImageDesktop {
-    width: 100%;
-    display: none;
-    transition: 0.3s;
-}
-/* square con */
-.squareConInner {
-    height: 100%;
-    width: 100%;
-    position: relative;
-} 
-.squareConInner:hover .squareConImage {
-    transform: scale(1.05);
-}
-.squareConInner:hover .squareConImageDesktop {
-    transform: scale(1.05);
-}
-.squareConImage {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 180px;
-    border-radius: 10px;
-    border: 2px solid #FFF;
-    transition: 0.3s;
-}
-.squareConImageDesktop {
-    width: 100%;
-    display: none;
-    transition: 0.3s;
-    border-radius: 10px;
-}
-.darkBorder {
-    border: 2px solid #2B2B2B;
-}
-/* both con inner */
-.imageContainer { 
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.innerTextarea {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    z-index: 200;
-    position: relative;
-} 
-.longConInner .innerTextarea {
-    width: calc(100% - 390px);
-    text-align: center;
-    align-items: center;
-    padding: 0 20px;
-    transition: width 0.3s;
-}
-.squareConInner .innerTextarea {
-    padding: 0 20px;
-    transition: width 0.3s;
-}
-.nameP {
-    font-size: 40px;
-    font-weight: bold;
-    color: #FFF;
-    line-height: 45px;
-} 
-.visitSiteBtn {
-    margin-top: 30px;
-    padding: 10px 40px;
-    width: 160px;
-    border-radius: 20px;
-    background-color: #FFF;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.visitSiteBtn:hover {
-    transform: scale(1.1);
-}
-.visitSiteBtn .desktopFas {
-    margin-left: 10px;
-}
-.mobileFas { 
-    display: none;
-}
-.visitSiteBtn .fas {
-    font-size: 10px;
-    color: #424242;
 }
 
 /* page overlay */
@@ -370,143 +247,50 @@ export default {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 1700px) {
-    .squareConImage {width: 150px;}
+@media only screen and (max-width: 1450px) {
+    /* Universal */
+    .portCardCon {height: 400px;}
+    /* Short Cards */
+    .portCardCon.short .portCardInner { flex-wrap: wrap; }
+    .portCardCon.short .portCardInner .titleArea { width: 100%; }
+    .portCardCon.short .cardMainImg { margin-top: 20px; width: 100%;}
+    .portCardCon.short .titleArea { padding-right: 0;}
+    /* Long Cards */
+    .portCardCon.long .cardMainImg { height: 80%;}
 }
-@media only screen and (max-width: 1600px) {
-    .col1 .squareConInner .innerTextarea {height: 200px;}
-    .col2 .squareConInner .innerTextarea {height: 200px;}
-    .squareConInner .imageContainer {left: 0; right: 0;}
-    /* images */
-    .squareConImage {display: flex; left: 20px; right: 20px; width: calc(100% - 40px); top: 200px;}
-    /* Manage size of cards */
-    .squareCon .webConInner {height: 500px;} 
-    .col2WebCon .webConInner {height: 380px;} 
-}
-
-@media only screen and (max-width: 1380px) {
-    /* long con */
-    .longConImage {width: 300px;}
-    .longConInner .innerTextarea {width: calc(100% - 340px);}
-}
-@media only screen and (max-width: 1300px) {
-    /* long con */
-    .longConImage {width: 250px; }
-    .longConInner .innerTextarea {width: calc(100% - 290px);}
-}
-
-/* make cards all rows */
-@media only screen and (max-width: 1200px) {
-
-    .col1 .squareConInner .innerTextarea {height: 320px;}
-    .col2 .squareConInner .innerTextarea {height: 320px;}
-    .squareConInner .imageContainer {left: 20px; right: 20px;}
-    /* images */
-    .squareConImage {display: flex; left: auto; right: 20px; width: 250px; top: 20px;}
-    .squareConImageDesktop {display: none;}
-    /* long con */
-    .longConImage {width: 350px; top: 20px;}
-    .longConInner .innerTextarea {width: calc(100% - 390px);}
-
-    /* Manage size of cards */
-    .squareCon .webConInner {height: 320px;} 
-    .col2WebCon .webConInner {height: 320px;} 
-    .squareCon {width: 100%;} 
-    .col1 {width: 100%;}
-    .col2 {width: 100%;}
-
-    .squareConInner .innerTextarea {width: calc(100% - 290px);text-align: center;align-items: center;} 
-}
-@media only screen and (max-width: 1050px) {
-    /* long con */
-    .longConImage {width: 320px; top: 20px;}
-    .longConInner .innerTextarea {width: calc(100% - 360px);}
-}
-
-
-/* make cards standard grid */
 @media only screen and (max-width: 1024px) {
-    .col1 .squareConInner .innerTextarea {height: 200px;}
-    .col2 .squareConInner .innerTextarea {height: 200px;}
-    .squareConInner .imageContainer {left: 0; right: 0;}
-    /* images */
-    .squareConImage {display: flex; left: 20px; right: 20px; width: calc(100% - 40px); top: 200px;}
-    .squareConImageDesktop {display: none;}
-
-
+    /* Universal */
+    .portCon {padding: 0 10px 10px;}
     /* page adjust */
     .pageOver {left: 0;}
-    .portCon { padding: 0 10px 10px;}
-
-    /* Manage size of cards */
-    .squareCon {width: 50%;} 
-    .col1 {width: 65%;}
-    .col2 {width: 35%;}
-    /* Manage size of cards */
-    .squareCon .webConInner {height: 500px;} 
-    .col2WebCon .webConInner {height: 380px;} 
-
-    .squareConInner .innerTextarea {width: auto;text-align: left;align-items: flex-start;padding: 0 20px;transition: width 0.3s;}
 }
-
-@media only screen and (max-width: 920px) {
-
-    .col1 .squareConInner .innerTextarea {height: 400px;}
-    .col2 .squareConInner .innerTextarea {height: 400px;}
-    .squareConInner .imageContainer {left: 0; right: 0;}
-    /* images */
-    .squareConImage {display: flex; left: auto; right: 20px; width: 250px; top: 20px;}
-    .squareConImageDesktop {display: none;}
-    /* long con */
-    .longConImage {width: 350px;}
-    .longConInner .innerTextarea {width: calc(100% - 390px);}
-
-    /* Manage size of cards */
-    .squareCon .webConInner {height: 400px;} 
-    .col2WebCon .webConInner {height: 400px;} 
-    .squareCon {width: 100%;} 
-    .col1 {width: 100%;}
-    .col2 {width: 100%;}
-
-    .squareConInner .innerTextarea {width: calc(100% - 270px);text-align: center;align-items: center;} 
+@media only screen and (max-width: 700px) {
+    /* Universal */
+    .portCardCon.long {width: 100%;}
+    .portCardCon.short {width: 100%;}
+    .portCardCon {height: 300px;}
+    .portCardInner {padding: 0 40px}
+    /* Short Cards */
+    .portCardCon.short .portCardInner { flex-wrap: nowrap; }
+    .portCardCon.short .portCardInner .titleArea { width: auto; }
+    .portCardCon.short .cardMainImg { margin-top: 170px; width: 200px;}
+    .portCardCon.short .titleArea { padding-right: 40px;}
 }
-
-@media only screen and (max-width: 650px) {
-    /* long con */
-    .longConImage {width: 300px;}
-    .longConInner .innerTextarea {width: calc(100% - 340px);}
+@media only screen and (max-width: 500px) {
+    /* Universal */
+    .visitSiteBtn {display: none;}
+    .portCardInner {padding: 40px 20px}
+    .portCardCon {height: auto;}
+    .cardMainImg {display: none;}
+    .cardMobileImg {display: flex;}
+    .mobileSiteBtn {display: flex;}
+    /* Short Cards */
+    .portCardCon.short .portCardInner { flex-wrap: wrap; }
+    .portCardCon.short .portCardInner .titleArea { width: 100%; }
+    .portCardCon.short .titleArea { padding-right: 0;}
+    /* Long Cards */
+    .portCardCon.long .portCardInner { flex-wrap: wrap; }
+    .portCardCon.long .portCardInner .titleArea { width: 100%; }
+    .portCardCon.long .titleArea { padding-right: 0;}
 }
-
-@media only screen and (max-width: 600px) {
-    /* images */
-    .longConImage {display: none;}
-    .longConImageTall {display: flex;}
-    .longConInner .innerTextarea {width: calc(100% - 270px);}
-    /* Manage size of cards */
-    .longCon .webConInner {height: 400px;} 
-}
-@media only screen and (min-width: 530.1px) {
-    .navigateToPageBtnCon {display: none;}
-}
-@media only screen and (max-width: 530px) {
-    /* textarea height */
-    .innerTextarea {height: auto !important; padding: 40px 20px !important; text-align: left !important; width: 100% !important; align-items: flex-start !important;}
-    /* images */
-    .longConImageTall {display: none;}
-    .squareConImage {display: none;}
-    .squareConImageDesktop {display: flex; top: 220px; bottom: auto;}
-    .longConImageDesktop {display: flex;}
-    
-    .imageContainer {position: relative; left: auto !important; right: auto !important;; top: auto; bottom: auto; width: 100%; padding: 0 20px 20px; overflow: visible;}
-    /* Manage size of cards */
-    .longCon .webConInner {height: auto;} 
-    .squareCon .webConInner {height: auto;} 
-    .col2WebCon .webConInner {height: auto;} 
-    /* button */
-    .visitSiteBtn {position: absolute;top: 40px;right: 20px;margin: 0;padding: 0;height: 40px;width: 40px;border-radius: 50%; display: flex;justify-content: center; align-items: center;}
-    .visitSiteBtn .desktopContent {display: none;}
-    .visitSiteBtn .mobileFas {font-size: 14px; display: inherit;}  
-
-}
-
 </style>

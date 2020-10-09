@@ -6,7 +6,7 @@
                 <div class="contentWrapper">
                     <div class="modalContent" :style="{ 'background-color' : modalData.accent, 'color' : modalData.textColor }" :class="{ 'animateModal' : animate }">
                         <div class="modalHeader">
-                            <h4 class="modalTitle">{{modalData.topText}}<br>{{modalData.botText}}</h4>
+                            <h4 class="modalTitle">{{modalData.title}}</h4>
                             <div v-on:click="closeModal" class="closeModalBtn" :style="{ 'background-color' : modalData.btnBackColor }"><fa class="fas" :style="{ 'color' : modalData.btnColor }" :icon="['fas', 'times']" /></div>
                         </div>
                         <div class="contentSection" :style="{ 'background-color' : modalData.modalBackground }"> 
@@ -139,6 +139,7 @@ export default {
 .modalTitle {
     font-size: 30px;
     line-height: 35px; 
+    max-width: 150px;
 }
 .closeModalBtn {
     height: 40px;

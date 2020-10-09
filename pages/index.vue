@@ -6,7 +6,7 @@
       <p class="pHP">Browse my selection of single page sites and web applications</p>
     </div>
     <!-- Portfolio -->
-    <portfolio/>
+    <Portfolio/>
     <!-- More info modal -->
     <moreInfoModal v-if="modalStatus"/>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
 //components
-import portfolio from '@/components/HomeComponents/Portfolio'
+import Portfolio from '@/components/HomeComponents/Portfolio'
 import moreInfoModal from '@/components/HomeComponents/MoreInfoModal'
 
 export default {
@@ -32,8 +32,9 @@ export default {
     },
   },
   components: {
-    portfolio,
+    Portfolio,
     moreInfoModal
+    
   },
   methods: {
 
