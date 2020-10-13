@@ -108,8 +108,9 @@ export default {
 
 <style scoped>
 .portCon {
-    padding: 0 40px 40px;
-    width: 100%;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: calc(100% + 20px);
     display: flex;
     flex-wrap: wrap;
 }
@@ -196,7 +197,7 @@ export default {
 /* Mobile Card Image */
 .cardMobileImg {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
     display: none;
 }
 
@@ -260,7 +261,6 @@ export default {
 }
 @media only screen and (max-width: 1024px) {
     /* Universal */
-    .portCon {padding: 0 10px 10px;}
     /* page adjust */
     .pageOver {left: 0;}
 }

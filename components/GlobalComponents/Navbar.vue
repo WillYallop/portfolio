@@ -68,7 +68,7 @@ export default {
     width: 100%;
 }
 .navSect {
-    padding: 50px;
+    padding: 40px;
 }
 .navSect:last-child {
     padding-top: 0;
@@ -111,13 +111,13 @@ export default {
     align-self: flex-end;
     width: 100%;
     display: flex;
-    padding: 50px;
+    padding: 40px;
 }
 .navBtn {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    background-color: #000000;
+    background-color: #FFFFFF;
     border: none;
     cursor: pointer;
     margin-right: 10px;
@@ -128,12 +128,16 @@ export default {
     text-decoration: none;
 }
 .navBtn .fas {
-    color: #FFF;
+    color: #0E0E0E;
     font-size: 16px;
+    transition: 0.3s;
 }
 .navBtn:last-child {
     margin-right: 0;
 }   
+.navBtn:hover .fas {
+    color: #1E63EB;
+}
 
 @media only screen and (max-width: 1024px) {
     .navContainer {left: 100%; width: 100%;  transition:  0.3s; transition-timing-function: ease-in-out; top: 60px;}

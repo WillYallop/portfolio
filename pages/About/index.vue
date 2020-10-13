@@ -1,20 +1,27 @@
 <template>
   <div class="pageContainer">
-    <!-- Header -->
-    <div class="pageHeader">
-      <h1 class="pHH1">About Me</h1>
-      <p class="pHP">Find out more about me as a developer and a person.</p>
-    </div>
-    <!-- Component Container -->
-    <div class="compCon">
-      <!-- As developer -->
-      <asDeveloper 
-      v-if="currentComponent == 1"
-      @change-component="changeComponent"/>
-      <!-- As person -->
-      <asPerson  
-      v-if="currentComponent == 2"
-      @change-component="changeComponent"/>
+    <div class="pageWrapper paddHori paddVert">
+      <!-- Header -->
+      <div class="pageHeader">
+        <div class="pHTextarea">
+          <h1 class="pHH1">About Me</h1>
+          <p class="pHP">Find out more about me as a developer and a person.</p>
+        </div>
+        <div class="pHBtnCon">
+          <nuxt-link class="pHBtn" to="/contact"><fa class="fas" :icon="['fas', 'envelope']" /></nuxt-link>
+        </div>
+      </div>
+      <!-- Component Container -->
+      <div class="compCon">
+        <!-- As developer -->
+        <asDeveloper 
+        v-if="currentComponent == 1"
+        @change-component="changeComponent"/>
+        <!-- As person -->
+        <asPerson  
+        v-if="currentComponent == 2"
+        @change-component="changeComponent"/>
+      </div>
     </div>
   </div>
 </template>
@@ -51,12 +58,5 @@ export default {
 </script>
 
 <style scoped>
-.compCon {
-  padding: 0 50px 50px;
-}
-
-@media only screen and (max-width: 1024px) {
-  .compCon {padding: 0 20px 20px;}
-}
 
 </style>

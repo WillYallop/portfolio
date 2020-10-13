@@ -80,21 +80,58 @@ select:focus {outline: none;}
   min-height: 100%;
 }
 .pageHeader {
-  padding: 50px;
+  border-bottom: 1px solid #393939;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-.pHH1 {font-size: 24px;}
+.pHTextarea {
+  padding-right: 40px;
+}
+.pHH1 {font-size: 24px; font-weight: 900;}
 .pHP {margin-top: 10px;}
+.pHBtn {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: #1359FB;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  padding: 0;
+}
+.pHBtn:hover {
+  background-color: #104EDD;
+}
+.pHBtn .fas {
+  color: #FFF;
+}
 
 /* font sizes */
 p {color: #A7A7A7;}
 .p14 {font-size: 14px;}
+
+/* Global Padding */
+.paddHori {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.paddVert {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
 
 
 @media only screen and (max-width: 1024px) {
   .pageContainer {padding: 0; position: absolute; top: 0; left: 0; right: 0; transition:  0.3s; transition-timing-function: ease-in-out; padding-top: 60px;}
   .pageSlide {left: -100%; right: -100%;}
-  .pageHeader {padding: 40px 20px 30px;}
+  /* Global Padding */
+  .paddHori {padding-left: 20px;padding-right: 20px;}
+  .paddVert {padding-top: 40px;padding-bottom: 40px;}
 }
 
 </style>

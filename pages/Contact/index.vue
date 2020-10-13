@@ -1,21 +1,27 @@
 <template>
   <div class="pageContainer">
-    <!-- Header -->
-    <div class="pageHeader">
-      <h1 class="pHH1">Contact</h1>
-      <p class="pHP">Have a question? Feel free to send me a message!</p>
-    </div>
-    <!-- component flex container -->
-    <div class="compContainer" :class="{ 'fadeUpAni' : animateComp }">
+    <div class="pageWrapper paddHori paddVert">
+      <!-- Header -->
+      <div class="pageHeader">
+        <div class="pHTextarea">
+          <h1 class="pHH1">Contact</h1>
+          <p class="pHP">Have a question? Feel free to send me a message!</p>
+        </div>
+        <div class="pHBtnCon">
+          <nuxt-link class="pHBtn" to="/"><fa class="fas" :icon="['fas', 'th-large']" /></nuxt-link>
+        </div>
+      </div>
+      <!-- component flex container -->
+      <div class="compContainer" :class="{ 'fadeUpAni' : animateComp }">
 
-      <div class="col2">
-        <contactForm/>
-      </div>
-      <div class="col1">
-        <nextSteps/>
+        <div class="col2">
+          <contactForm/>
+        </div>
+        <div class="col1">
+          <nextSteps/>
+        </div>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -50,7 +56,6 @@ export default {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 50px 50px;
   transition: 0.3s;
   
 }
@@ -76,7 +81,6 @@ export default {
   .col2 {width: 100%;}
 }
 @media only screen and (max-width: 1024px) {
-  .compContainer {padding: 0 20px 20px;}
   .col1 {width: 40%; margin-top: 0;}
   .col2 {width: 60%;}
 }
