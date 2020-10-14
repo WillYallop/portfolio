@@ -152,6 +152,7 @@ export default {
     font-size: 38px;
     line-height: 38px;
     max-width: 150px;
+    font-weight: 800;
 }
 /* Desktop Btn */
 .visitSiteBtn {
@@ -163,6 +164,10 @@ export default {
     margin-top: 20px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
+}
+.visitSiteBtn:hover {
+    transform: scale(1.1);
 }
 .visitSiteBtn .fas {
     margin-left: 10px;

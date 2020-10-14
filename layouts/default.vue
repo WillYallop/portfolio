@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
 
 html {
   -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
@@ -100,7 +100,6 @@ select:focus {outline: none;}
 }
 .pHH1 {
   font-size: 24px; 
-  font-weight: 900;
   color: var(--title-text);
 }
 .pHP {

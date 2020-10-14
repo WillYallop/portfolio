@@ -10,6 +10,7 @@
                 <nav class="navSect">
                     <ul class="navUl">
                         <li><nuxt-link @click.native="closeNav" to="/">Portfolio</nuxt-link></li>
+                        <li><nuxt-link @click.native="closeNav" to="/blog">Blog</nuxt-link></li>
                         <li><nuxt-link @click.native="closeNav" to="/about">About</nuxt-link></li>
                         <li><nuxt-link @click.native="closeNav" to="/contact">Contact</nuxt-link></li>
                     </ul>
