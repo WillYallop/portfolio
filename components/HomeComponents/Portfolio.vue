@@ -225,7 +225,7 @@ export default {
     transition: 0.2s;
 }
 .pageOver.active {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* mobile navigate btn */

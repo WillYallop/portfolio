@@ -139,6 +139,23 @@ p {color: var(--body-text);}
   padding-top: 40px;
   padding-bottom: 40px;
 }
+/* Btn Styles */
+.btnStyle1 {
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #000000;
+  color: #FFF;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btnStyle1 .fas {
+  margin-right: 5px;
+}
+.btnStyle1:hover {
+  transform: scale(1.05);
+}
 
 @media only screen and (max-width: 1024px) {
   .pageContainer {padding: 0; position: absolute; top: 0; left: 0; right: 0; transition:  0.3s; transition-timing-function: ease-in-out; padding-top: 60px;}

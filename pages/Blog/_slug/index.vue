@@ -1,16 +1,18 @@
 <template>
     <div class="pageContainer">
         <div class="pageWrapper paddHori paddVert">
-            <blog>
+            
+                <p>{{ blog.tags }}</p>
                 <h1>{{ blog.title }}</h1>
                 <p>{{ blog.description }}</p>
+                
                 <img
                 :src="blog.image"
                 :alt="blog.alt"/>
                 <p>Article last updated: {{ formatDate(blog.updatedAt) }}</p>
 
                 <nuxt-content :document="blog" />
-            </blog>
+           
         </div>
     </div>
 </template>

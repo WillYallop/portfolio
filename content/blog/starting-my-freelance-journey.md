@@ -1,11 +1,10 @@
 ---
-title: Praesent sed neque efficitur
+title: Starting my freelance journey!
 description: Aliquam ultrices ex eget leo tincidunt
-date: 2020-10-10
 image: index.jpg
 tags:
-  - test
-  - another
+  - freelance
+author: William Yallop
 ---
 
 Ut ut justo arcu. Praesent sed neque efficitur,
