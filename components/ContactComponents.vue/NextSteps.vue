@@ -53,7 +53,7 @@ export default {
 .nextStepsCon {
     width: 100%;
     height: 100%;
-    background-color: #F6F6F6;
+    background-color: #EBEBEB;
     border-radius: 0 20px 20px 0;
     padding: 30px;
 }

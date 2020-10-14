@@ -183,7 +183,7 @@ export default {
 }
 .contactFormContainer {
     width: 100%;
-    background-color: #FFF;
+    background-color: var(--secondary-bg-color);
     border-radius: 20px 0 0 20px;
     padding: 30px;
 }
@@ -205,7 +205,7 @@ export default {
     border: none;
     font-size: 16px;
     padding: 0 10px;
-    background-color: #F7F7F7;
+    background-color: #FFF;
     border-radius: 5px;
     height: 45px;
 }
@@ -218,7 +218,7 @@ export default {
     min-height: 200px;
     resize: none;
     border-radius: 5px;
-    background-color: #F7F7F7;
+    background-color: #FFF;
     border: none;
     padding: 10px;
     font-size: 16px;

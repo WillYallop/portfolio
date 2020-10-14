@@ -22,7 +22,7 @@
             "VueJs"
         ],
         "links": [
-            ["github", "#6e5494", "https://github.com/WillYallop/exodia-fitness" ]
+            
         ],
         "modalBackground": "rgba(255, 255, 255, 0.15)"
     },
@@ -108,7 +108,7 @@
         "id": 6, 
         "title": "Anyrep Admin", 
         "textColor": "#2B2B2B", 
-        "accent": "#FFFFFF", 
+        "accent": "#E3F3FF", 
         "btnBackColor": "#1B9CF3", 
         "btnColor": "#FFF", 
         "websiteUrl": "https://anyrep.williamyallop.com", 

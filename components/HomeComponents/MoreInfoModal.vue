@@ -223,7 +223,7 @@ export default {
     right: 0;
     bottom: -56px;
     padding-bottom: 56px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 10;
     opacity: 1;
     transition: 0.3s;

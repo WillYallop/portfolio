@@ -199,7 +199,7 @@ export default {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    background-color: black;
+    background-color: #FFF;
     color: #FFF;
     border: none;
     cursor: pointer;
@@ -212,14 +212,15 @@ export default {
 }
 .btnHeaderStyle .fas {
     font-size: 16px;
+    color: #000000;
 }
 
 /*Hamburger*/
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  background-color: #FFFFFF;
+  background-color: #000000;
 }
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
-  background-color: #FFFFFF;
+  background-color: #000000;
 }
 .hamburger {
   padding: 0;

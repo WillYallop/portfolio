@@ -46,6 +46,7 @@ export default {
 }
 .rowComp h4 {
     padding: 0 5px 10px;
+    color: #FFF;
 }
 .rowContainer {
     margin-bottom: 10px;

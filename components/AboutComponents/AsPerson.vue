@@ -67,6 +67,7 @@ export default {
 .asH1 {
     font-size: 30px;
     line-height: 35px;
+    color: #FFF;
 }
 .changeCompBtn {
     padding: 10px 40px;

@@ -27,6 +27,7 @@ export default {
 }
 .rowComp h4 {
     padding: 0 5px 10px;
+    color: #FFF;
 }
 .rowContainer {
     width: 100%;

@@ -5,7 +5,7 @@
                 <div class="navSect">
                     <img class="ppImage" src="../../assets/images/profilePic.jpg" alt="">
                     <h4>William Yallop</h4>
-                    <p class="p14 emailP">hello@williamyallop.com</p>
+                    <a href="mailto:hello@williamyallop.com" class="p14 emailP">hello@williamyallop.com</a>
                 </div>
                 <nav class="navSect">
                     <ul class="navUl">
@@ -57,7 +57,7 @@ export default {
     left: 0;
     bottom: 0;
     width: 350px;
-    background-color: #0C0C0C;
+    background-color: var(--secondary-bg-color);
 }
 .navWrapper {
     height: 100%;
@@ -81,6 +81,8 @@ export default {
 }
 .emailP {
     margin-top: 5px;
+    text-decoration: none;
+    color: var(--body-text);
 }
 .navUl {
     padding: 0;
@@ -101,10 +103,10 @@ export default {
     transition: color 0.3s;
 }
 .navUl li a:hover {
-    color: #FFF;
+    color: var(--title-text);
 }
 .nuxt-link-exact-active {
-    color: #FFF !important;
+    color: var(--title-text) !important;
 }
 
 .navLinksCon {
@@ -117,7 +119,7 @@ export default {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    background-color: #FFFFFF;
+    background-color: #000000;
     border: none;
     cursor: pointer;
     margin-right: 10px;
@@ -128,7 +130,7 @@ export default {
     text-decoration: none;
 }
 .navBtn .fas {
-    color: #0E0E0E;
+    color: #FFF;
     font-size: 16px;
     transition: 0.3s;
 }
