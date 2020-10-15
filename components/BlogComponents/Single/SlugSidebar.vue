@@ -1,19 +1,5 @@
 <template>
     <div class="blogSidebarCon">
-        <!-- Filter -->
-        <div class="sectionCon">
-            <div class="sectHeader">
-                <h4>Filter</h4>
-            </div>
-            <div class="sectBody"> 
-                <select class="inputStyle" v-model="categoryQuery">
-                    <option value="all">Category</option>
-                    <option value="website release">Website Release</option>
-                    <option value="personal">Personal</option>
-                </select>
-                <button class="btnStyle1" v-on:click="filterBlogs"><fa class="fas" :icon="['fas', 'search']" />Search</button>
-            </div>
-        </div>
         <!-- Portfolio -->
         <div class="sectionCon">
             <div class="sectHeader">
@@ -23,7 +9,7 @@
                 <!-- Exodia Preview -->
                 <div class="portRow exodiaBg" v-on:click="$router.push('/')">
                     <div class="textarea">
-                        <img src="../../assets/images/blog/exodiaPreviewPort.png" alt="EXODIA Fitness Preview">
+                        <img src="../../../assets/images/blog/exodiaPreviewPort.png" alt="EXODIA Fitness Preview">
                         <p>EXODIA<br>Fitness</p>
                     </div>
                     <nuxt-link class="portBtn" to="/"><fa class="fas" :icon="['fas', 'th-large']" /></nuxt-link>
@@ -31,7 +17,7 @@
                 <!-- Anyrep Preview -->
                 <div class="portRow anyrepBg" v-on:click="$router.push('/')">
                     <div class="textarea">
-                        <img src="../../assets/images/blog/anyrepPreviewPort.png" alt="Anyrep Preview">
+                        <img src="../../../assets/images/blog/anyrepPreviewPort.png" alt="Anyrep Preview">
                         <p>Anyrep<br>Repairs</p>
                     </div>
                     <nuxt-link class="portBtn" to="/"><fa class="fas" :icon="['fas', 'th-large']" /></nuxt-link>
@@ -39,7 +25,7 @@
                 <!-- Melody Preview -->
                 <div class="portRow melodyBg" v-on:click="$router.push('/')">
                     <div class="textarea">
-                        <img src="../../assets/images/blog/melodyPreviewPort.png" alt="Melody Melon Preview">
+                        <img src="../../../assets/images/blog/melodyPreviewPort.png" alt="Melody Melon Preview">
                         <p>Melody<br>Melon</p>
                     </div>
                     <nuxt-link class="portBtn" to="/"><fa class="fas" :icon="['fas', 'th-large']" /></nuxt-link>
@@ -58,24 +44,6 @@
         </div>
     </div>
 </template>
-
-<script>
-export default {
-    data() {
-        return {
-            categoryQuery: 'all'
-        }
-    },
-    props: {
-
-    },
-    methods: {
-        filterBlogs() {
-            this.$emit('query-search-blog', this.categoryQuery)
-        }
-    }
-}
-</script>
 
 <style scoped>
 .blogSidebarCon {

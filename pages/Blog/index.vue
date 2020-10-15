@@ -1,7 +1,7 @@
 <template>
     <div class="pageContainer">
         <div class="pageWrapper paddHori paddVert">
-            
+
             <!-- Header -->
             <div class="pageHeader">
                 <div class="pHTextarea">
@@ -12,15 +12,18 @@
                     <nuxt-link class="pHBtn" to="/contact"><fa class="fas" :icon="['fas', 'envelope']" /></nuxt-link>
                 </div>
             </div>
-
+        
             <!-- Blog Page Content -->
-            <div class="blogContainer">
+            <div class="blogContainer" :class="{ 'fadeUpAni' : animateComp }">
                 <div class="blogListCol">
                     <BlogList
-                    :blogs="blogs"/>
+                    :blogs="blogs"
+                    :pinned="pinned"
+                    :categoryQuery="categoryQuery"/>
                 </div>
                 <div class="blogSidebarCol">
-                    <BlogSidebar/>
+                    <BlogSidebar
+                    @query-search-blog="updateSearchQuery"/>
                 </div>
             </div>
 
@@ -35,20 +38,32 @@ import BlogSidebar from '@/components/BlogComponents/BlogSidebar'
 
 export default {
     async asyncData({ $content }) {
-        const blogs = await $content('blog').limit(10).fetch()
-        return { blogs }
+        const blogs = await $content('blog').sortBy('createdAt', 'desc').limit(10).fetch()
+        const pinned = await $content('blog').where({ pinned: true }).limit(1).fetch()
+        return { blogs, pinned }
     },
     data() {
         return {
-            blogs: []
+            animateComp: true,
+            blogs: [],
+            categoryQuery: 'all'
+            
         }
+    },
+    mounted() {
+        setTimeout(() => {
+            this.animateComp = false
+        }, 300)
     },
     components: {
         BlogList,
         BlogSidebar
+
     },
     methods: {
-
+        updateSearchQuery(categoryQuery) {
+            this.categoryQuery = categoryQuery
+        }
     }
 }
 </script>
@@ -59,12 +74,29 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    transition: 0.3s;
+}
+.fadeUpAni {
+  transform: translate(0,50px);
+  opacity: 0;
 }
 .blogListCol {
-    width: calc(100% - 420px);
+    width: calc(100% - 370px);
 }
 .blogSidebarCol {
-    width: 400px;
-    min-width: 400px;
+    width: 350px;
+    min-width: 350px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1350px) {
+    .blogListCol {width: 100%;}
+    .blogSidebarCol {display: none;}
+}
+@media only screen and (max-width: 1024px) {
+    .paddVert {padding-top: 20px; padding-bottom: 20px;}
+}
+@media only screen and (max-width: 700px) {
+
 }
 </style>
