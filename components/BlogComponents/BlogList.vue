@@ -18,7 +18,7 @@
         </div>
 
         <!-- Blog Row -->
-        <nuxt-link :to="'/blog/' + blog.slug" class="blogRow" :key="blog.slug" v-for="blog in blogs">
+        <div class="blogRow" :key="blog.slug" v-for="blog in blogs" v-on:click="$router.push('/blog/' + blog.slug)">
             <div class="rowImgCon" :style="{ backgroundImage: `url(${getImageUrl(blog.image)})`, 'background-color' : blog.accentColor }"></div>
             <div class="rowContent">
                 <div class="topRow">
@@ -31,7 +31,7 @@
                 <p class="rowDescP">{{blog.description}}</p>
                 <nuxt-link :to="'/blog/' + blog.slug" class="btnStyle1">Read more..</nuxt-link>
             </div>
-        </nuxt-link>
+        </div>
 
     </div>
 </template>
@@ -61,7 +61,7 @@ export default {
         },
         /* Format Methods */
         getImageUrl(name) {
-            var images = require.context('../../assets/images/', false)
+            var images = require.context('../../assets/images/blog/', false)
             return images('./' + name)
         },
         formatDate(date) {

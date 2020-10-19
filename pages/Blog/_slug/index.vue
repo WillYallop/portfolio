@@ -63,7 +63,9 @@
                         <p class="crumbSpacer lastCrumbSpacer">»</p>
                         <p class="crumbSlug">{{blog.slug}}</p>
                     </div>
+   
                     <nuxt-content :document="blog" />
+
                 </div>
             </div>
             <div class="blogSidebarCol">
@@ -153,7 +155,7 @@ export default {
     methods: {
         /* Format Methods */
         getImageUrl(name) {
-            var images = require.context('../../../assets/images/', false)
+            var images = require.context('../../../assets/images/blog/', false)
             return images('./' + name)
         },
         formatDate(date) {
@@ -181,7 +183,7 @@ export default {
     height: 100%;
     width: 100%;
     padding: 100px 40px 120px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,7 +191,7 @@ export default {
 .banContCon {
     display: flex;
     flex-wrap: wrap;
-    max-width: 650px;
+    max-width: 700px;
     flex-direction: column;
     align-items: center;
 }
@@ -293,6 +295,8 @@ export default {
 } 
 .crumbSlug {
     color: #898989;
+    height: 22px;
+    overflow: hidden;
 }
 .crumbSpacer {
     padding: 0 5px;
@@ -319,5 +323,45 @@ export default {
     .postInfoCon {flex-wrap: wrap; text-align: center;}
     .postInfoCol {width: 100%;}
     .postInfoCol:last-child {margin-top: 5px;}
+}
+</style>
+
+
+<style>
+/* Blog Content Styling */
+.nuxt-content h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #111A2C;
+}
+.nuxt-content h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #111A2C;
+}
+.nuxt-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.nuxt-content ul {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.nuxt-content .blogImg {
+    width: 100%;
+
+    border-radius: 10px;
+}
+.nuxt-content-highlight {
+    margin-bottom: 20px;
+}
+.nuxt-content blockquote {
+    margin-top: 10px;
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: .25em solid #dfe2e5;
 }
 </style>
