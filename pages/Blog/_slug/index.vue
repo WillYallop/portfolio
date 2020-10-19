@@ -82,8 +82,7 @@ import SlugSidebar from '@/components/BlogComponents/Single/SlugSidebar'
 
 export default {
     async asyncData({ $content, params }) {
-        const blog = await $content('blog', params.slug).fetch()
-
+        const blog = await $content('Blog', params.slug).fetch()
         return { blog }
     },
     data() {
@@ -92,57 +91,7 @@ export default {
      
         }
     },
-    computed: {
-        blogTitle() {
-            if (this.blog) return this.blog.title
-            return 'A blog'
-        },
-        blogDescription() {
-            if (this.blog) return this.blog.description
-            return 'Check out my awesome blogs at my personal website, williamyallop.com'
-        },
-        blogImage() {
-            if (this.blog) return this.getImageUrl(this.blog.image)
-            return 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'
-        }, 
-    },
-    head() {
-        return {
-            title: 'William Yallop | ' + this.blogTitle,
-            meta: [
-                {
-                    hid: 'description',
-                    name: 'description',
-                    content: this.blogDescription
-                },
-                {
-                    hid: "og:url",
-                    property: 'og:url',
-                    content: 'https://williamyallop.com'
-                },
-                {
-                    hid: "og:type",
-                    property: 'og:type',
-                    content: 'website'
-                },
-                {
-                    hid: "og:title",
-                    property: 'og:title',
-                    content: this.blogTitle
-                },
-                {
-                    hid: "og:description",
-                    property: 'og:description',
-                    content: this.blogDescription
-                },
-                {
-                    hid: "og:image",
-                    property: 'og:image',
-                    content: 'https://williamyallop.com' + this.blogImage
-                }
-            ]
-        }
-    },
+ 
     mounted() {
         setTimeout(() => {
             this.animateComp = false

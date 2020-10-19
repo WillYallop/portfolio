@@ -2,6 +2,7 @@
 title: Why and How I remade the Anyrep Appliance Repairs website
 description: The version of the site that was live before this was made very early in my web development journey; quite frankly it didn't reach the targets I set for it.
 image: anyrepBlog1Bg.png
+imageExternal: https://drive.google.com/uc?export=view&id=1Y7vvYH_OjROR-Ml3JMKhT5Ce3KTRdNds
 tags:
   - website release
 author: William Yallop

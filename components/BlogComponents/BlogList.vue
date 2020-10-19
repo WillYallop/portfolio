@@ -40,11 +40,11 @@
 export default {
     data() {
         return {
-            pinnedBlog: []
+  
         }
     },
     mounted() {
-        //this.findPinnedBlog()
+
     },
     props: {
         blogs: Array,
@@ -52,13 +52,6 @@ export default {
         categoryQuery: String
     },
     methods: {
-        findPinnedBlog() {
-            for(var x = 0; x < this.blogs.length; x++) {
-                if(this.blogs[x].pinned) {
-                    this.pinnedBlog.push(this.pinnedBlog[x])
-                }
-            }
-        },
         /* Format Methods */
         getImageUrl(name) {
             var images = require.context('../../assets/images/blog/', false)
