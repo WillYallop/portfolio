@@ -332,6 +332,10 @@ export default {
 
 <style>
 /* Blog Content Styling */
+.nuxt-content a {
+    color: #1E63EB;
+    text-decoration: none;
+}
 .nuxt-content h2 {
     font-weight: bold;
     font-size: 24px;

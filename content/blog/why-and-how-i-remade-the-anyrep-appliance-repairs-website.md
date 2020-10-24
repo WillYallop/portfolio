@@ -11,7 +11,7 @@ accentColor: '#1E63EB'
 ---
 
 ## What is Anyrep Appliance Repairs?
-Anyrep is an appliance repair business that my dad owns and runs that specialises in domestic and commercial appliance repairs. This covers appliance repairs from washing machines and fridges, all the way to walk in freezer units and fryers like the ones you might find at your favourite restaurants.
+Anyrep is an appliance repair business that my dad owns and runs that specialises in domestic and commercial appliance repairs. This covers appliance repairs from <a href="https://www.anyrep.co.uk/washing-machine-repairs/">washing machines</a> and <a href="https://www.anyrep.co.uk/fridge-and-freezer-repairs/">fridges</a>, all the way to walk in freezer units and fryers like the ones you might find at your favourite restaurants.
 
 ## The Story
 On the 4th of October, I took it upon myself to remake the Anyrep Appliance Repairs website again (yes again..). The version of the site that was live before this was made very early in my web development journey; quite frankly it didn't reach the targets I set for it. It lacked SEO, information on the appliance repair services, and left room for improvement when it came to converting visitors into clients.
@@ -70,11 +70,11 @@ Once I have finished all the components, and style, there are a couple of perfor
 
 At this point when the website is ready for production, I generate the static files and upload them to my webserver. From here I go through the website one last time to make sure everything works and also test it on a couple of devices.
 
-You can view the code on my [GitHub](https://github.com/WillYallop/anyrep).
+You can view the code on my <a href="https://github.com/WillYallop/anyrep">GitHub</a>.
 
-And the website at [anyrep.co.uk](https://www.anyrep.co.uk/)
+And the website at <a href="https://www.anyrep.co.uk/">anyrep.co.uk</a>
 
 ## Conclusion
 3 days, 23 commits and litres of coffee later... Anyrep Appliance Repairs has a shiny new website to show off. It's speedy and responsive, has a new conversion strategy and primed to start its journey ranking on Google. 
 
-It turned out better than I could ever imagine, but don't take my word for it. Check it out yourself, and remember: if you require an [appliance repair in Norwich](https://www.anyrep.co.uk/), contact Anyrep Domestic & Commercial Appliance Repairs.
+It turned out better than I could ever imagine, but don't take my word for it. Check it out yourself, and remember: if you require an <a href="https://www.anyrep.co.uk/">appliance repair in Norwich</a>, contact Anyrep Domestic & Commercial Appliance Repairs.
