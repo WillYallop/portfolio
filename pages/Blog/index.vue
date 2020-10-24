@@ -42,6 +42,31 @@ export default {
         const pinned = await $content('Blog').where({ pinned: true }).limit(1).fetch()
         return { blogs, pinned }
     },
+    head: {
+        title: 'William Yallop | Blog',
+        meta: [
+            {
+                name: 'description',
+                content: 'Welcome to my website! View my a brief protfolio of my work and find out more about me.'
+            },
+            {
+                property: 'og:url',
+                content: 'https://williamyallop.com/blog'
+            },
+            {
+                property: 'og:type',
+                content: 'website'
+            },
+            {
+                property: 'og:title',
+                content: 'William Yallop | Blog'
+            },
+            {
+                property: 'og:description',
+                content: 'Welcome to my website! View my a brief protfolio of my work and find out more about me.'
+            }
+        ],
+    },
     data() {
         return {
             animateComp: true,

@@ -31,6 +31,31 @@ import nextSteps from '@/components/ContactComponents.vue/NextSteps'
 import contactForm from '@/components/ContactComponents.vue/ContactForm'
 
 export default {
+    head: {
+        title: 'William Yallop | Contact',
+        meta: [
+            {
+                name: 'description',
+                content: 'Welcome to my website! View my a brief protfolio of my work and find out more about me.'
+            },
+            {
+                property: 'og:url',
+                content: 'https://williamyallop.com/contact'
+            },
+            {
+                property: 'og:type',
+                content: 'website'
+            },
+            {
+                property: 'og:title',
+                content: 'William Yallop | Contact'
+            },
+            {
+                property: 'og:description',
+                content: 'Welcome to my website! View my a brief protfolio of my work and find out more about me.'
+            }
+        ],
+    },
   data() {
     return {
       animateComp: true

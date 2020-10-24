@@ -31,6 +31,31 @@ import asDeveloper from '@/components/AboutComponents/AsDeveloper'
 import asPerson from '@/components/AboutComponents/AsPerson'
 
 export default {
+  head: {
+    title: 'William Yallop | About',
+    meta: [
+      {
+        name: 'description',
+        content: 'Welcome to my website! View my a brief protfolio of my work and find out more about me.'
+      },
+      {
+        property: 'og:url',
+        content: 'https://williamyallop.com/about'
+      },
+      {
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        property: 'og:title',
+        content: 'William Yallop | About'
+      },
+      {
+        property: 'og:description',
+        content: 'Welcome to my website! View my a brief protfolio of my work and find out more about me.'
+      }
+    ],
+  },
   data() {
     return {
       currentComponent: 1,

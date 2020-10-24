@@ -91,7 +91,61 @@ export default {
      
         }
     },
- 
+    computed: {
+        blogTitle() {
+            if (this.blog) return this.blog.title
+            return 'A blog'
+        },
+        blogSlug() {
+            if (this.blog) return 'https://williamyallop.com/blog/' + this.blog.slug
+            return ''
+        },
+        blogDescription() {
+            if (this.blog) return this.blog.description
+            return 'Check out my awesome blogs at my personal website, williamyallop.com'
+        },
+        blogImage() {
+            if (this.blog) return this.blog.imageExternal
+            return 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'
+        }, 
+    },
+    head() {
+        return {
+            title: 'William Yallop | ' + this.blogTitle,
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.blogDescription
+                },
+                {
+                    hid: "og:url",
+                    property: 'og:url',
+                    content: this.blogSlug
+                },
+                {
+                    hid: "og:type",
+                    property: 'og:type',
+                    content: 'website'
+                },
+                {
+                    hid: "og:title",
+                    property: 'og:title',
+                    content: this.blogTitle
+                },
+                {
+                    hid: "og:description",
+                    property: 'og:description',
+                    content: this.blogDescription
+                },
+                {
+                    hid: "og:image",
+                    property: 'og:image',
+                    content: this.blogImage
+                }
+            ]
+        }
+    },
     mounted() {
         setTimeout(() => {
             this.animateComp = false
