@@ -6,7 +6,7 @@ imageExternal: https://drive.google.com/uc?export=view&id=1Y7vvYH_OjROR-Ml3JMKhT
 tags:
   - website release
 author: William Yallop
-pinned: true
+pinned: false
 accentColor: '#1E63EB'
 ---
 

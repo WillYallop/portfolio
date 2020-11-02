@@ -7,8 +7,8 @@
 
                 <div class="titleArea">
                     <h4 class="cardTitle" :style="{ 'color' : website.textColor }">{{website.title}}</h4>
-                    <a :href="website.websiteUrl" target="_blank" class="visitSiteBtn" :style="{ 'background-color' : website.btnBackColor, 'color' : website.btnColor }">website<fa class="fas" :style="{ 'color' : website.btnColor }" :icon="['fas', 'chevron-right']" /></a>
-                    <a :href="website.websiteUrl" target="_blank" class="mobileSiteBtn" :style="{ 'background-color' : website.btnBackColor, 'color' : website.btnColor }"><fa class="fas" :style="{ 'color' : website.btnColor }" :icon="['fas', 'desktop']" /></a>
+                    <a :href="website.websiteUrl" class="visitSiteBtn" :style="{ 'background-color' : website.btnBackColor, 'color' : website.btnColor }">website<fa class="fas" :style="{ 'color' : website.btnColor }" :icon="['fas', 'chevron-right']" /></a>
+                    <a :href="website.websiteUrl" class="mobileSiteBtn" :style="{ 'background-color' : website.btnBackColor, 'color' : website.btnColor }"><fa class="fas" :style="{ 'color' : website.btnColor }" :icon="['fas', 'desktop']" /></a>
                 </div>
                 
                 <img class="cardMainImg" :src="getImageUrl(website.mainImage)" :alt="website.title">
