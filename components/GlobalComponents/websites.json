@@ -89,7 +89,7 @@
         "websiteUrl": "https://finder.melodymelon.com", 
         "mainImage": "melodyFinerMain.png", 
         "mobileImage": "melodyFinderMobile.png",
-        "description": "A quick and simple tool to find your perfect playlist. Its still in development and so hasnt been populated with the correct playlists and currently all results are the same.", 
+        "description": "A quick and simple tool to find your perfect playlist.", 
         "languages": [
             ["js-square", "#ec008c"],
             ["css3-alt", "#264de4"],
@@ -156,25 +156,25 @@
     { 
         "displayType": "short", 
         "id": 7, 
-        "title": "FILS Fitness",
+        "title": "Bassline Promotions",
         "textColor": "#FFF", 
-        "accent": "#05B0A0", 
+        "accent": "#1DD45E", 
         "btnBackColor": "#FFF",
         "btnColor": "#1C1C1C", 
-        "websiteUrl": "https://filsfitness.com", 
-        "mainImage": "filsFitnessMain.png", 
-        "mobileImage": "filsFitnessMobile.png",
-        "description": "This is my second ever website created with PHP and is very basic. However it allows you to create a workout and also track some data about it. It also has a feature where you can compare your lifts against the average standards for other people.", 
+        "websiteUrl": "https://basslinepromotions.com", 
+        "mainImage": "bassPromotionsMain.png", 
+        "mobileImage": "bassPromotionsMobile.png",
+        "description": "Bassline Promotions is my most recent website I have created and includes a blog, eccommerce and in depth order tracking capabilities. It also has a custom backend created for the admin where they can review orders and other data.", 
         "languages": [
-            ["php", "#474A8A"],
+            ["js-square", "#ec008c"],
             ["css3-alt", "#264de4"],
             ["html5", "#E44D26"]
         ],
         "frameworks": [
-
+            "VueJs"
         ],
         "links": [
-            ["github", "#6e5494", "https://github.com/WillYallop/fils-fitness" ]
+
         ],
         "modalBackground": "rgba(255, 255, 255, 0.15)"
     }
