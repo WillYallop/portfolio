@@ -82,7 +82,7 @@ import SlugSidebar from '@/components/BlogComponents/Single/SlugSidebar'
 
 export default {
     async asyncData({ $content, params }) {
-        const blog = await $content('Blog', params.slug).fetch()
+        const blog = await $content('blog', params.slug).fetch()
         return { blog }
     },
     data() {

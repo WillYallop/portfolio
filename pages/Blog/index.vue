@@ -38,8 +38,8 @@ import BlogSidebar from '@/components/BlogComponents/BlogSidebar'
 
 export default {
     async asyncData({ $content }) {
-        const blogs = await $content('Blog').sortBy('createdAt', 'desc').limit(10).fetch()
-        const pinned = await $content('Blog').where({ pinned: true }).limit(1).fetch()
+        const blogs = await $content('blog').sortBy('createdAt', 'desc').limit(10).fetch()
+        const pinned = await $content('blog').where({ pinned: true }).limit(1).fetch()
         return { blogs, pinned }
     },
     head: {
